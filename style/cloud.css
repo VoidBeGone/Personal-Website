@@ -11,7 +11,11 @@ body{
     min-height:100vh;
     background:#181c1f;
 }
-
+.entirecloud {
+    position: relative; 
+    animation: moving_in 3s linear forwards; 
+    will-change: transform;
+}
 .cloudcontainer{
     position:relative;
     height:400px;
@@ -44,6 +48,7 @@ body{
     z-index: 0; 
     padding: 0 20px;
 }
+
 .rain span{
     position:relative;
     width:10px;
@@ -54,16 +59,31 @@ body{
     animation: animate 3s linear infinite;
     animation-duration: calc(15s / var(--i));
     transform-origin:bottom;
+    animation-delay: 3s;
+    visibility:hidden;
+    will-change: transform;
 }
 
 @keyframes animate{
     0%{
+        visibility:visible;
         transform:translateY(0) scale(1);
     }
     70%{
+        visibility:visible;
         transform:translateY(400px) scale(0.8);
     }
     100%{
+        visibility:visible;
         transform: translateY(450px) scale(0);
+    }
+}
+
+@keyframes moving_in {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }
