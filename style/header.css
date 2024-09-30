@@ -1,45 +1,123 @@
+#Gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: px; 
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    background-color: transparent;
+}
+
 #Gallery .container {
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    align-items:center;
-    justify-items:center;
-    font-family:"Pacifico",cursive;
-    color:#6FB3B8;
-    border-bottom:1px solid rgb(111, 179, 184, 0.25)
-
-}
-#Gallery .container .box2{
-    text-align:center;
-    font-size:2.75vw; 
-    margin:0;
-    line-height: 0.75; 
-    transition: transform 0.3s ease
-}
-#Gallery .container .box1, #Gallery .container  .box3{
-    text-align:center;
-    font-size:2.35vw;
-    margin:0;
-    line-height: 0.75; 
-    transition: transform 0.3s ease
-}
-#Gallery .container .box1{
     position: relative;
-    z-index:10;
-    cursor:pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%; 
+    padding: 8px; 
+    border-radius: 12px; 
+    background: rgba(40, 40, 50, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 10px rgb(62, 247, 225); 
+    text-align: center;
 }
-#Gallery .container .box3 a, #Gallery .container .box3 a:visited, #Gallery .container .box3 a:hover, #Gallery .container .box3 a:active{
-    color:#6FB3B8;
-    text-decoration:none;
+#Gallery .box1 {
+    font-size: 24px; 
+    color: white;
+    background: linear-gradient(90deg, #61ffad 30%, #3cf2ff 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 3px 8px; 
+    transition: transform 0.3s ease;
+    margin-right: 5px; 
 }
 
-
-.box3:hover, .box1:hover, .box2:hover{
-    transform:scale(1.07);
+#Gallery .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 12px; 
 }
 
-/*
-In the future add some code that makes the Add Image button a little easier
-to click when the screen is small
-rather with media stuff or javascript and media stuff
-since when its like 400x 400 its kinda hard to press lowkey
-*/
+.link a {
+    font-size: 18px; 
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px; 
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
+    border-radius: 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background:rgb(236, 236, 236);
+    flex-basis: 100px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.link .IDK{
+    font-size: 24px; 
+    color: white;
+    background: linear-gradient(90deg, #61ffad 30%, #3cf2ff 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 3px 8px; 
+    transition: transform 0.3s ease;
+    margin-right: 15px; 
+}
+.link a:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#dropdownMenu {
+    display: none;
+}
+
+#dropdownMenu .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: rgba(40, 40, 50, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#dropdownMenu .dropdown-content a {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+#dropdownMenu:hover .dropdown-content {
+    display: block;
+}
+@media (min-width:850px){
+    .box1{
+        display:none;
+    }
+}
+@media (max-width: 850px) {
+    #Gallery .link {
+        display: none;
+    }
+
+    #dropdownMenu {
+        display: inline-block;
+        font-size: 20px; 
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: linear-gradient(90deg, #61ffad 30%, #3cf2ff 70%);
+        text-align: center;
+        cursor: pointer;
+    }
+}
