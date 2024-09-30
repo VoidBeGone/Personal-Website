@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: px; 
+    padding: 10px; 
     display: flex;
     justify-content: center;
     z-index: 100;
@@ -25,14 +25,16 @@
 }
 #Gallery .box1 {
     font-size: 24px; 
+    align-self:flex-start;
     color: white;
+    justify-content:center;
     background: linear-gradient(90deg, #61ffad 30%, #3cf2ff 70%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 3px 8px; 
     transition: transform 0.3s ease;
-    margin-right: 5px; 
+    margin-right: 20vw; 
 }
 
 #Gallery .link {
@@ -99,12 +101,12 @@
 #dropdownMenu:hover .dropdown-content {
     display: block;
 }
-@media (min-width:850px){
+@media screen and (min-width:850px){
     .box1{
         display:none;
     }
 }
-@media (max-width: 850px) {
+@media screen and (max-width: 850px) {
     #Gallery .link {
         display: none;
     }
