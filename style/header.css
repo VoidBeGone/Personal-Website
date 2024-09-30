@@ -24,7 +24,7 @@
     text-align: center;
 }
 #Gallery .box1 {
-    font-size: 24px; 
+    font-size: 26px; 
     align-self:flex-start;
     color: white;
     justify-content:center;
@@ -34,7 +34,10 @@
     -webkit-text-fill-color: transparent;
     padding: 3px 8px; 
     transition: transform 0.3s ease;
-    margin-right: 20vw; 
+    margin-right: 30vw; 
+    word-wrap:nowrap;
+    flex-wrap:nowrap;
+    overflow:hidden;
 }
 
 #Gallery .link {
@@ -62,7 +65,7 @@
 }
 
 .link .IDK{
-    font-size: 24px; 
+    font-size: 26px; 
     color: white;
     background: linear-gradient(90deg, #61ffad 30%, #3cf2ff 70%);
     background-clip: text;
@@ -71,6 +74,9 @@
     padding: 3px 8px; 
     transition: transform 0.3s ease;
     margin-right: 15px; 
+    word-wrap:nowrap;
+    flex-wrap:nowrap;
+    overflow:hidden;
 }
 .link a:hover {
     transform: scale(1.05);
