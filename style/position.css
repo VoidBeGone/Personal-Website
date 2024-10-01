@@ -1,0 +1,54 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+.movingbackground{
+    position:absolute;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: url(https://img.freepik.com/premium-vector/cartoon-house-grass-with-sky-background_961875-456886.jpg);
+    overflow:hidden;
+    background-size:cover;
+    z-index:0;
+    animation: moving 10s linear infinite;
+}
+
+@keyframes moving{
+    0%{
+        background-position:0 0;
+    }
+    100%{
+        background-position: -1000px 0;
+    }
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:black;
+}
+
+.statictext{
+    position:relative;
+    z-index:2;
+    font-size:40px;
+}
+
+.image{
+    position:relative;
+    width:300px;
+    z-index:2;
+}

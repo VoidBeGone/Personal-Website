@@ -1,0 +1,171 @@
+.body{
+    max-width: 100%;
+    height:100%;
+}
+
+.toplayer{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+}
+
+.toplayerbackround{
+    position:absolute;
+    z-index:0;
+    background: radial-gradient(rgba(230, 225, 200, 1) 0%, rgb(205, 200, 172) 35%, #91cbd3 100%);
+
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.wavefront{
+    background: url('../media/wavefront.svg') repeat-x;
+    position:fixed;
+    top:0;
+    right:0;
+    width:7460px;
+    height:100vh;
+    z-index:6;
+    transform: translateX(0px);
+    will-change:transform;
+    animation: wavefront 24s linear infinite; 
+    opacity:0.3;
+}
+.wavefront2{
+    background: url('../media/wavefront.svg') repeat-x;
+    position:fixed;
+    top:0;
+    right:0;
+    width:7460px;
+    height:100vh;
+    z-index:5;
+    transform:translateX(360px) translateY(-13px);
+    will-change:transform;
+    animation: swell 6s ease infinite;
+    will-change: transform;
+    opacity:0.4;
+}
+
+.wavemid{
+    background: url('../media/wavemid.svg') repeat-x;
+    position:fixed;
+    top:0;
+    right:0;
+    width:7460px;
+    height:100vh;
+    transform:translateX(250px);
+    z-index:4;
+    will-change:transform;
+    animation: wavemid 30s linear infinite;
+    opacity:0.5;
+}
+.wavemid2{
+    background: url('../media/wavemid.svg') repeat-x;
+    position:fixed;
+    top:0;
+    right:0;
+    width:7460px;
+    height:100vh;
+    transform:translateX(610px) translateY(-13px);
+    z-index:3;
+    will-change:transform;
+    animation: wavemidswell 7s ease infinite;
+    opacity:0.6
+}
+.waveback{
+    background: url('../media/wavefar.svg') repeat-x;
+    position:fixed;
+    top:0;
+    right:0;
+    width:7460px;
+    height:100vh;
+    transform:translateX(400px);
+    z-index:2;
+    will-change:transform;
+    animation: waveback 33s linear infinite;
+    opacity:0.8;
+}
+.waveback2{
+    background: url('../media/wavefar.svg') repeat-x;
+    position:fixed;
+    top:0;
+    right:0;
+    width:7460px;
+    height:100vh;
+    transform:translateX(760px) translateY(-13px);
+    z-index:1;
+    will-change:transform;
+    animation: wavebackswell 9s linear infinite;
+    opacity:0.9;
+}
+@keyframes swell{
+    0% {
+        transform: translateY(-13px);
+      }
+      50% {
+        transform: translateY(40px);
+      }
+      100%{
+        transform:translateY(-13px);
+      }
+}
+@keyframes wavefront{
+    0%{
+        transform:translateX(0px);
+    }
+    50%{
+        transform:translateX(1920px);
+    }
+    100%{
+        transform:translate(0px);
+    }
+}
+
+@keyframes wavemid{
+    0%{
+        transform:translateX(250px);
+    }
+    50%{
+        transform:translateX(1920px);
+    }
+    100%{
+        transform:translate(250px);
+    }
+}
+@keyframes wavemidswell{
+    0%{
+        transform:translateX(610px) translateY(-13px);
+    }
+    50%{
+        transform:translateX(610px) translateY(40px);
+    }
+    100%{
+        transform:translateX(610px) translateY(-13px);
+    }
+}
+@keyframes waveback{
+    0%{
+        transform:translateX(400px);
+    }
+    50%{
+        transform:translateX(1920px);
+    }
+    100%{
+        transform:translate(400px);
+    }
+}
+ 
+@keyframes wavebackswell{
+    0%{
+        transform:translateX(760px) translateY(-13px);;
+    }
+    50%{
+        transform:translateX(760px) translateY(40px);;
+    }
+    100%{
+        transform:translateX(760px) translateY(-13px);;
+    }
+}
