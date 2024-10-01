@@ -11,16 +11,10 @@ https://fonts.google.com/selection/embed
   }
     
   body {
-    /*background-image:url('../media/background.jpeg');*/
-    background-color:rgb(37, 37, 37);
-    background-size:cover;
-    background-position:center;
-    background-repeat:repeat;
+
     font-family: "Pacifico",cursive;
     font-size: 14px;
     color: #3c3d3f;
-    text-align: left;
     max-width: 100%;
-    margin: auto;
   }
 

@@ -6,7 +6,7 @@
 .toplayer{
     position:fixed;
     width:100%;
-    height:100vh;
+    height:100%;
     top:0;
     left:0;
 }
@@ -15,7 +15,6 @@
     position:absolute;
     z-index:0;
     background: radial-gradient(rgba(230, 225, 200, 1) 0%, rgb(205, 200, 172) 35%, #91cbd3 100%);
-
     left:0;
     width:100%;
     height:100%;
